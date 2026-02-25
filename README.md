@@ -31,8 +31,8 @@ To achieve that, I used [Bash](#ref-bash-docs), [GPG](#ref-gnupg-docs), and [SSH
 
 ```bash
 read -p "USER_REPO: " USER_REPO
-SETUP_SCRIPT_URL="https://raw.githubusercontent.com/${USER_REPO}/refs/heads/main/setup.sh"
-curl -fsSL "$SETUP_SCRIPT_URL" -O
+SETUP_URL="https://raw.githubusercontent.com/${USER_REPO}/refs/heads/main/setup.sh"
+curl -fsSL "$SETUP_URL" -O
 bash ./setup.sh
 ```
 
@@ -52,6 +52,11 @@ cat ~/.ssh/config
 ```
 
 Important: this workflow is useful and practical, but the project still has an open authenticity gap for published scripts (documented below in [TODO (Authenticity Verification)](#todo-authenticity-verification)) ⚠️
+
+<a id="demo-gif"></a>
+Here is an animated GIF demonstrating the steps in this section:
+
+![Demo](images/demo.gif)
 
 <a id="development-model"></a>
 ## Development model 🏛️
@@ -332,7 +337,7 @@ Planned steps:
 5. End-to-end test
    Publish the script and its signature.
    Execute after downloading to a local file (using the URL pattern shown in [Setup script raw download URL](#ref-setup-script-download)).
-   For example: `curl -fsSL "$SETUP_SCRIPT_URL" -O && bash ./setup.sh`.
+   For example: `curl -fsSL "$SETUP_UeL" -O && bash ./setup.sh`.
    Confirm it fails if the script is modified.
 
 <a id="references"></a>
