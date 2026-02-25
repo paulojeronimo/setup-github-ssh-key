@@ -4,6 +4,16 @@ Bootstrap a new machine for GitHub [SSH](#ref-openssh-docs) access using a [GPG]
 
 The script prompts for the GPG passphrase, validates integrity (hash of the script itself and the GPG blob), installs the key at `~/.ssh/id_ed25519_gh`, generates the public key at `~/.ssh/id_ed25519_gh.pub`, and ensures a `Host github.com` entry exists in `~/.ssh/config`.
 
+<div align="center">
+  <table>
+    <tr>
+      <td align="center" bgcolor="#e9eef5">
+        <strong><a href="https://raw.githubusercontent.com/paulojeronimo/setup-github-ssh-key/refs/heads/pdf/README.pdf">Download this README.md in PDF format</a></strong>
+      </td>
+    </tr>
+  </table>
+</div>
+
 ## Quick links 🔎
 
 - [Motivation](#motivation)
